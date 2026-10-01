@@ -12,6 +12,8 @@ public class Main {
             System.out.println("i = " + i);
 
             System.out.println("This is another line added");
+            // adding another function here for testing
+
         }
     }
 }
