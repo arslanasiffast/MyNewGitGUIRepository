@@ -57,10 +57,19 @@ public class GUIFrame extends Frame implements  ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(txtUsername.getText().isEmpty() || txtPass.getText().isEmpty())
+        if(txtUsername.getText().isEmpty() || txtPass.getText().isEmpty()) {
             lbWrong.setText("Empty fields are not allowed");
+
+        }
         else
+        {
+
+            AddPersonalInfo form = new AddPersonalInfo(this,txtUsername.getText());
+            form.setVisible(true);
+            this.setVisible(false);
             lbWrong.setText("Welcome "+txtUsername.getText()+"");
+        }
+
     }
 
 }
